@@ -9,15 +9,16 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const result = await axios.post("/user/login", formData)
-            tokenDispatch({ type: "SET_TOKEN", payload: result.data.token })
-            userDispatch({ type: "SET_USER", payload: result.data.user })
-            localStorage.setItem("authToken",JSON.stringify(result.data.token))
+          const result = await axios.post("/user/login", formData);
+          tokenDispatch({ type: "SET_TOKEN", payload: result.data.token });
+          userDispatch({ type: "SET_USER", payload: result.data.user });
+          localStorage.setItem("authToken", JSON.stringify(result.data.token));
         } catch (error) {
-            console.log(error);
-            setError({ message: error.response.data.message })
+          console.log(error);
+          setError({ message: error.response ? error.response.data.message : 'An error occurred' });
         }
-    }
+      };
+      
 
     const handleChange = (e) => {
         const { name, value } = e.target;
