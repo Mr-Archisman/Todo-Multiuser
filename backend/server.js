@@ -15,7 +15,7 @@ mongoose.set('strictQuery', true);
 
 //middlewares
 app.use(cors({
-    origin: 'https://todo-multiuser.vercel.app/', // Update with your frontend URL
+    origin: 'https://todo-multiuser.vercel.app', // Update with your frontend URL
     credentials: true
   }));
 
