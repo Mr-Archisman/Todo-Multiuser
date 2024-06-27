@@ -1,6 +1,11 @@
 # Installation
+<<<<<<< HEAD
 
 ```
+=======
+Run the following command to clone the repository
+
+>>>>>>> 34c1ada6d3aa9a81be9f73ff1e52ebe7bee36d29
 Go to ```frontend``` and ```backend``` directory to install packages
 ```
 cd frontend
